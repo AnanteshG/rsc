@@ -9,23 +9,17 @@
 }
 body {
   max-height: 1000vh;
-  /* background: linear-gradient(#2b1055,#7597de); */
+  /* background: linear-gradient(#f6a51d, white 50%, #040a25 1%); */
   overflow: auto;
   overflow-x: hidden;
   /* background-color: grey; */
   position: relative;
 }
 header {
-  background-color: rgba(
-    18,
-    22,
-    60,
-    1
-  ); /* Initial background color with transparency */
+  background-color: white; /* Initial background color with transparency */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: inset -4px -12px 30px rgb(63, 71, 108);
   position: sticky;
   top: 0px;
   z-index: 10;
@@ -47,6 +41,9 @@ header {
 .container {
   display: flex;
   align-items: center;
+  margin-top: 50px;
+
+  /* width: 200px; */
 }
 
 header ul {
@@ -72,13 +69,18 @@ header ul li a {
 header ul li a:hover {
   background-color: rgb(166, 192, 197);
   transform: scale(1.05);
+  transition: transform 0.3s ease-out ;
+  
 }
 .lighten{
-  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
 }
 
 .web-name {
-  color: rgb(211, 208, 208);
+  color: black;
+  position:absolute;
+  margin-top:5%;
+  margin-left:7%;
 }
 
 .burger {
@@ -98,8 +100,8 @@ header ul li a:hover {
 
 /* Navbar responsive */
 
-@media (max-width: 1270px) {
-  .v-class {
+@media (max-width: ) {
+  .nav-main {
     display: flex;
     flex-direction: column;
     height: 2px;
@@ -191,9 +193,8 @@ section img {
 }
 
 .upperbody {
-  background-color: rgb(223, 239, 255);
-  background-color: rgb(174, 196, 219);
-  background-image: url("images/page1andlogos/backgroundimage.png");
+  
+  /* background-image: url("images/page1andlogos/backgroundimage.png"); */
   filter: grayscale(0.4);
 
   /* background-image: url('images/image1.png'); */
@@ -320,6 +321,7 @@ section img {
 }
 
 .footer {
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -346,9 +348,13 @@ section img {
   padding: 12px;
 }
 .footer-main {
-  position: relative;
-  background-color: #141414;
   width: 100%;
+  min-height: auto;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow:-10px;
   display: inline-block;
   color: aliceblue;
   font-size: 14px;
@@ -363,7 +369,7 @@ section img {
 }
 .quicklinks a:hover {
   text-decoration: none;
-  color: rgb(234, 215, 241);
+  color:   #040a25;
   transform: scale(1.1);
 }
 #insta {
@@ -378,6 +384,10 @@ section img {
 
 .stepupcontainer {
   text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+  overflow-x: hidden; /* Hide horizontal overflow /* Enable vertical scrolling */
 }
 
 .stepupcards {
@@ -391,26 +401,24 @@ section img {
 .cardsu {
   width: 600px;
   margin: 90px 0px;
-  border: 2px solid rgb(137, 134, 74);
-  background-color: rgb(228 190 92);
-  color: white;
+  border: 1px solid black;
+  background: rgbs(255, 255, 255, 0.5);
+  color: black;
+  font-weight: bolder;
   padding: 30px 30px;
   border-radius: 20px;
   text-align: justify;
+  transition: transform 0.2s ease-out;
+  position: relative;
+  overflow: hidden;
 }
-.cardsu:hover {
-  border: 2px solid rgb(216, 210, 45);
-  background-color: #dcb146;
 
-  transform: scale(1.01);
-}
 
 .cardsu h3 {
   text-align: center;
   font-size: 30px;
   color: rgb(35, 35, 137);
 }
-
 .aboutEvent {
   width: 100%;
   display: flex;
@@ -426,7 +434,7 @@ section img {
   border-radius: 15px;
   width: 80%;
   height: 20rem;
-  background-color: rgba(22, 49, 106, 0.94);
+  background-color: #274b94;
   overflow: hidden;
   position: relative;
   margin-bottom: 20px;
@@ -441,7 +449,7 @@ section img {
 }
 
 .containerEvent:hover {
-  background-color: #274b94;
+  
   opacity: 1;
 }
 .containerEvent.img-left .content {
@@ -528,13 +536,13 @@ section img {
   flex-direction: column;
   text-align: center;
   /* background-color: rgb(252, 250, 229); */
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     #e6b7405a,
     #e6b7404c,
     #0b2f782c,
     #143066ee
-  );
+  ); */
   padding: 8px;
 }
 .img1 {
@@ -554,16 +562,19 @@ section img {
   width: 290px;
   border-radius: 10px;
   box-shadow: 3px 4px 5px rgba(68, 45, 183, 0.347);
+  transition: transform 0.3s ease-out;
   /* filter: brightness(1.6); */
 }
 
 .img1 img:hover {
   transform: scale(1.2);
+  
   /* filter: brightness(1.3); */
 }
 /* .......................................................................................... */
 
 .scan {
+  position: relative;
   display: flex;
   /* justify-content: center; */
   justify-content: space-around;
@@ -621,10 +632,7 @@ section img {
   .containerEvent p {
     font-size: 0.75em;
   }
-  .content {
-    font-size: 10px;
-    text-align: justify;
-  }
+
   .containerEvent img {
     height: 180px;
     width: 110px;
@@ -647,7 +655,6 @@ section img {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%;
   position: relative;
   margin: auto;
   background-color: #628dbb42;
@@ -657,6 +664,8 @@ section img {
 /* Hide the images by default */
 .mySlides {
   display: none;
+  /* width: 100%;
+  height: 10%; */
 }
 
 /* Next & previous buttons */
@@ -689,9 +698,9 @@ section img {
 }
 
 .carousel-container {
-  position: relative;
-  max-width: 600px;
-  max-height: 200px;
+  /* position: relative; */
+  /* max-width: 600px; */
+  /* max-height: 200px; */
   /* Adjust this value to your desired height */
   margin: 0 auto;
   overflow: hidden;
@@ -751,15 +760,15 @@ section img {
   }
 }
 
-.carimg {
+/* .carimg {
   display: flex;
   flex-direction: row;
-  width: 32%;
-  gap: 3%;
-}
+  /* width: 32%; */
+  /* gap: 3%; */
+/* } */ */
 
 .image-car-class {
-  height: 75vh;
+  /* height: 75vh; */
 }
 
 @media (max-width: 1500px) {
@@ -1023,4 +1032,189 @@ p {
   color: white;
   font-size: 1px;
   font-size: 15px;
+}
+.fit-picture{
+  width:1000px;
+  margin-top:80px;
+}
+body {
+    background: linear-gradient(360deg, #f6a51d, #ffffff 50%, #49a8b4 1%);
+}
+.nav-list{
+  margin-left:500px;
+  text-decoration: none;
+  padding-top:10px;
+  padding-top: -100px;
+}
+.logo{
+  margin-top:7%;
+  margin-left: 2%;
+}
+/* Apply flexbox to the navigation container */
+.nav-main {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  background-color:none; /* Example background color */
+  padding: 10px;
+  position: absolute;
+  margin-left:30%;
+}
+
+/* Style the list within the navigation */
+.v-class {
+  display: flex; /* Enable flexbox on the ul */
+  list-style-type: none; /* Remove bullet points */
+   /* Remove default margin */
+  /* Remove default padding */
+  gap: 46px;
+  justify-content: center;
+  padding-bottom:40px;
+}
+.nav-list {
+  margin: 0 15px;
+  margin-top: 44px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  padding: 10px; 
+}
+
+/* Hover effect for links */
+.nav-list a:hover {
+  text-decoration: underline;
+  color: #f6a51d;
+}
+/* Optional: Style the burger menu */
+.burger {
+  display: none; /* Hide by default, you can adjust for responsive design */
+  flex-direction: column;}
+
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Responsive design example: Show burger menu on smaller screens */
+
+
+/* Example style for the image container */
+.stepupcontainer {
+  text-align: center; /* Center align the image */
+  margin-top: 20px;
+}
+
+.fit-picture {
+  max-width: 100%;
+  height: auto;
+}
+
+.left{
+ margin-left:220px;
+}
+
+.scan-text{
+  margin-left:3%;
+  position: absolute;
+  font-family: "Kanit", sans-serif;
+}
+.quote.text{
+  padding-top: 100px;
+  font-family: "Kanit", sans-serif;
+}
+#container1{
+  font-size: 30px;
+}
+.cont{
+  margin-top: -150px;
+  margin-left:100px;
+  text-align: left;
+}
+.side-bar{
+  position: fixed;
+  top:0;
+  right: 0;
+  height: 100vh;
+  width:250px;
+  z-index:999;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.side-bar li{
+  width: 100%;
+}
+.side-bar a{
+  width:100%;
+}
+.menu-button{
+  margin-top: 20px;
+  display: none;
+  position: absolute;
+}
+
+@media(max-width: 970px){
+  .hideOnMobile{
+    display:none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+@media(max-width:400){
+  .side-bar{
+    width:100%;
+  }
+  
+}
+@media(max-width:970px){
+  .content{
+    font-size: 1em
+  }
+}
+@media(max-width:500px){
+  .content{
+    font-size: 1em;
+  }
+  #b{
+    width:350px;
+    height:200px;
+    margin-left:-160px;
+  }
+  .quote-text{
+    font-size:15px;
+    margin-left: -80px;
+  }
+}
+@media(max-width:500px){
+  .content{
+    font-size: 10px;
+    padding-left: 1px;
+  }
+  .container-img{
+    height:2px;
+    width:2px;
+  }
+}
+#desc-text{
+  font-size: 15px;
+}
+.logo-rnsit{
+  position: absolute;
+  left:2%;
+}
+.logo-rsc{
+  position: absolute;
+  right:2%;
 }
