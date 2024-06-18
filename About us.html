@@ -552,33 +552,41 @@
 </style>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo"><img src="assets/images/page1andlogos/RNS_logo.png" height="76" width="76"
-                    style="margin: 0px 10px;"></a>
-            <h2 class="web-name">RNSIT Sports Club</h2>
-
-        </div>
-
-
+    <nav>
         <ul class="v-class">
-            <li class="nav-list"><a href="index.html" >Home</a></li>
-            <li class="nav-list"><a href="stepup.html">Step-Up</a></li>
-            <li class="nav-list"><a href="ourteam.html">Agones</a></li>
-            <li class="nav-list"><a href="About us.html" class="lighten">About Us</a></li>
+          <div class="container">
+            <a href="index.html" class="logo-rnsit"><img src="assets/images/stepup/RNSlogo.png" height="76" width="76"
+                    ></a>
+          </div>
+            <li class="menu-button" onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+            <li class="nav-list hideOnMobile"><a href="index.html" >Home</a></li>
+            <li class="nav-list lighten hideOnMobile"><a href="stepup.html">Step-Up</a></li>
+            <li class="nav-list hideOnMobile"><a href="ourteam.html">Agones</a></li>
+            <li class="nav-list hideOnMobile"><a href="About us.html">About Us</a></li>
+            <div class="container">
+              <a href="index.html" class="logo-rsc"><img src="assets/images/stepup/RSClogo.png" height="110" width="110"
+                      ></a>
+          </div>
             <!-- <li class="nav-list"><a href="enquire.html">Enquire</a></li> -->
-
         </ul>
-        <div class="container">
-            <a href="index.html" class="logo"><img src="assets/images/page1andlogos/logo.png" height="110" width="110"
-                    style="margin-top: 10px;  margin-right: 20px;"></a>
-        </div>
+        
+        <ul class="side-bar">
+          <li onclick=hideSidebar() ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+          <li class="nav-list"><a href="index.html" >Home</a></li>
+          <li class="nav-list lighten"><a href="stepup.html">Step-Up</a></li>
+          <li class="nav-list"><a href="ourteam.html">Agones</a></li>
+          <li class="nav-list"><a href="About us.html">About Us</a></li>
+          
+          <!-- <li class="nav-list"><a href="enquire.html">Enquire</a></li> -->
+        </ul>
+       
         <div class="burger">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
+            
         </div>
-    </header>
+    </nav>
 
 
     <div class="aboutus">
@@ -589,7 +597,7 @@
                 <div class="imgtxt">
                     <h1>About us</h1>
                     <h2>RNSIT Sports Club</h2>
-                    <button class="au-readmore"> <a href="#readhere">Read More</a></button>
+                    <!-- <button class="au-readmore"> <a href="#readhere">Read More</a></button> -->
                 </div>
                 <div class="batchau">
                     <h3 id="#teamau">RSC 2022-23</h3>
@@ -882,13 +890,12 @@
 
     <footer class="footer-main">
         <div class="footer">
-
+           
             <div class="description flex-footer">
                 <h5>ABOUT US</h5>
-                <p> Join the RNSIT Sports Club in our journey towards a healthier lifestyle, stronger community
-                    bonds. We stride towards a brighter future.</p>
+                <p id="desc-text"> Join the RNSIT Sports Club in our journey towards a healthier lifestyle, stronger community bonds. We stride towards a brighter future.</p>
             </div>
-
+    
             <div class="quicklinks flex-footer">
                 <h5>QUICKLINKS</h5>
                 <a href="index.html">Home</a>
@@ -897,7 +904,7 @@
                 <a href="About us.html">About US</a>
                 <!-- <a href="enquire.html">Enquire</a> -->
             </div>
-
+       
             <div class="contactlinks flex-footer">
                 <h5>CONTACT INFORMATION</h5>
                 <p><i class="fa fa-envelope"></i>rsc.rnsit@gmail.com</p>
@@ -906,17 +913,17 @@
             </div>
             <div class="social-media flex-footer">
                 <h5>CONNECT HERE</h5>
-                <a href="https://www.instagram.com/rnsit_sports_club/"><i id="insta" class="fa fa-instagram"></i></a>
+                <a  href="https://www.instagram.com/rnsit_sports_club/"><i id="insta" class="fa fa-instagram"></i></a>
             </div>
-
+      
         </div>
-
-
+    
+    
         <div class="copyright">
             <h3> © 2023 RNSIT Sports Club. All rights reserved.</h3>
         </div>
-
-    </footer>
+        
+      </footer>
 
 </body>
 
@@ -929,5 +936,14 @@ height.classList.toggle('v-resp')
 </scrip> -->
 
 <script src="assets/script.js"></script>
-
+<script>
+    function showSidebar(){
+      const sidebar=document.querySelector('.side-bar')
+      sidebar.style.display ='flex';
+    }
+    function hideSidebar(){
+      const sidebar=document.querySelector('.side-bar')
+      sidebar.style.display ='none';
+    }
+   </script>
 </html>
