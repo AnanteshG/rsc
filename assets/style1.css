@@ -576,9 +576,9 @@ section img {
 .scan {
   position: relative;
   display: flex;
-  /* justify-content: center; */
-  justify-content: space-around;
-  margin: 100px;
+  justify-content: center;
+  /* justify-content: space-around; */
+  margin: 50px;
   flex-wrap: wrap;
   /* gap: 100px; */
   /* border: 1px solid #e2e4e9; */
@@ -1119,8 +1119,8 @@ body {
 }
 
 .scan-text{
-  margin-left:3%;
-  position: absolute;
+  /* margin-left:3%;
+  position: absolute; */
   font-family: "Kanit", sans-serif;
 }
 .quote.text{
@@ -1183,18 +1183,18 @@ body {
     font-size: 1em
   }
 }
-@media(max-width:500px){
+@media(max-width:600px){
   .content{
     font-size: 1em;
   }
   #b{
     width:350px;
     height:200px;
-    margin-left:-160px;
+    /* margin-left:-160px; */
   }
   .quote-text{
     font-size:15px;
-    margin-left: -80px;
+    /* margin-left: -80px; */
   }
 }
 @media(max-width:500px){
