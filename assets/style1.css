@@ -171,25 +171,25 @@ section img {
 }
 
 .vector {
-  margin-top: 15%;
-  height: 50%;
-  width: 30%;
+  margin-top: 3%;
+  height: 80%;
+  width: 55%;
 }
 #sport1 {
   position: absolute;
-  left: 0px;
+  left: -90px;
 }
 #sport2 {
   position: absolute;
-  left: 24%;
+  left: 10%;
 }
 #sport3 {
   position: absolute;
-  right: 24%;
+  right:15%;
 }
 #sport4 {
   position: absolute;
-  right: 0px;
+  right: -50px;
 }
 
 .upperbody {
@@ -299,11 +299,14 @@ section img {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .vector {
     margin-top: 150px;
-    width: 32%;
-    height: 27%;
+    width: 50%;
+    height: 30%;
+  }
+  #sport1{
+    margin-left: 10%;
   }
   .upperbody {
     height: 86vh;
@@ -574,11 +577,13 @@ section img {
 /* .......................................................................................... */
 
 .scan {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  margin:auto;
+  /* position: relative; */
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center; */
   /* justify-content: space-around; */
-  margin: 50px;
+  margin:27px;
   flex-wrap: wrap;
   /* gap: 100px; */
   /* border: 1px solid #e2e4e9; */
@@ -1118,15 +1123,11 @@ body {
  margin-left:220px;
 }
 
-.scan-text{
-  /* margin-left:3%;
-  position: absolute; */
-  font-family: "Kanit", sans-serif;
-}
-.quote.text{
+/* .quote.text{
+ 
   padding-top: 100px;
   font-family: "Kanit", sans-serif;
-}
+} */
 #container1{
   font-size: 30px;
 }
@@ -1193,6 +1194,7 @@ body {
     /* margin-left:-160px; */
   }
   .quote-text{
+    /* text-align: center; */
     font-size:15px;
     /* margin-left: -80px; */
   }
@@ -1217,4 +1219,29 @@ body {
 .logo-rsc{
   position: absolute;
   right:2%;
+}
+.bgclr{
+  background-color: #3047db;
+}
+.cyanbg{
+  background-color: #23BDAD ;
+}
+.arrow{
+  color:white;
+  background-color:#32333D;
+  height: 100px;
+  width:100px;
+  border:3px solid #EEBD94;
+  border-radius: 50%;
+  margin-left:100px;
+  text-align: center;
+  padding-top:25px;
+  box-shadow: 0 0 20px #EEBD94;
+  font-weight: 800;
+}
+.arrow:hover{
+    background-color: #1a1a1f;
+    border-radius: 50%;
+    box-shadow: 0 0 40px white;
+    cursor: pointer;
 }
